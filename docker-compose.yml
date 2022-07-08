@@ -1,0 +1,76 @@
+version: '3'
+
+networks:
+  webapp:
+    driver: bridge
+
+services:
+  nginx:
+    image: nginx:1.23.0-alpine
+    container_name: jumia_nginx
+    ports:
+    - "8000:80"
+    links:
+      - php
+    volumes:
+      - ./:/var/www/html
+      - /var/www/html/vendor
+      - ./docker/nginx/site.conf:/etc/nginx/conf.d/default.conf:rw
+      - ./docker/logs/nginx:/var/logs/nginx:rw
+    depends_on:
+      - php
+      - mysql
+    networks:
+      - webapp
+
+  php:
+    tty: true
+    stdin_open: true
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: jumia_php
+    volumes:
+        - ./:/var/www/html
+        - /var/www/html/vendor
+#        - ./app:/var/www/html/app
+#        - ./database:/var/www/html/database
+#        - ./resources:/var/www/html/resources
+#        - ./routes:/var/www/html/routes
+#        - ./lang:/var/www/html/lang
+#        - ./public:/var/www/html/public
+#    command: sh -c "composer install && php artisan key:generate && php artisan migrate && "
+    ports:
+      - "9001:9000"
+    depends_on:
+      - mysql
+    networks:
+      - webapp
+
+  mysql:
+    image: mysql:8
+    command: --default-authentication-plugin=mysql_native_password
+    environment:
+      - MYSQL_ROOT_PASSWORD=password
+      - MYSQL_DATABASE=jumia
+      - MYSQL_USER=homestead
+      - MYSQL_PASSWORD=secret
+    volumes:
+      - /var/lib/mysql
+    networks:
+        - webapp
+
+  phpmyadmin:
+    image: phpmyadmin
+    depends_on:
+      - mysql
+    environment:
+      PMA_HOST: mysql
+    restart: always
+    ports:
+      - 3000:80
+    volumes:
+      - /sessions
+    networks:
+        - webapp
+
