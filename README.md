@@ -10,7 +10,7 @@ and List cities
 Also i considered that every bus has 12 seat so to make task simple  
 when every bus created i will create 12 seat for it 
 
-
+so there is no crud operations for seats 
 
 ## Installation manual
 
