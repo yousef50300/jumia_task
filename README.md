@@ -7,6 +7,10 @@ I'm not make crud operations for all actions just make for (buses - routes - tri
 
 and List cities
 
+Also i considered that every bus has 12 seat so to make task simple  
+when every bus created i will create 12 seat for it 
+
+
 
 ## Installation manual
 
