@@ -1,0 +1,452 @@
+{
+	"info": {
+		"_postman_id": "8ec6bd60-1e1a-43ef-b622-405f8ea9183a",
+		"name": "Jumia",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20284290"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "user@example.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123456",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/auth/login",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Login",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "yousef@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "123456",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/auth/login",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"auth",
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.23.0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.7"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 07 Jul 2022 19:36:15 GMT"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "48"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"name\": \"yousef\",\n        \"email\": \"yousef@gmail.com\"\n    },\n    \"token\": \"11|xhuzDuHWloSRpGPxgYBvN85NqNSi3uYO4CJit981\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "yousef",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "yousef@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123456",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/auth/register",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Register",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "yousef",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "yousef@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "123456",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/auth/register",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"auth",
+										"register"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.23.0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.7"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 07 Jul 2022 19:29:29 GMT"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"name\": \"yousef\",\n        \"email\": \"yousef@gmail.com\"\n    },\n    \"token\": \"7|2hL4cn0Z1AjKaujbZwn62ivuPZkV9Q1QOcuJCVtQ\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Trips",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "1|OXQYpmK2v98Cu3FwlVKD7bYCPyLvVly7puHhLXp8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/trips?from=1&to=6",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"trips"
+					],
+					"query": [
+						{
+							"key": "from",
+							"value": "1"
+						},
+						{
+							"key": "to",
+							"value": "6"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cities List",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "1|pNErvzAG5KmtOmyqfOTbMIwm3B6sxRadotFsLwDa",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/cities",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"cities"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Cities List",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/cities",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"cities"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx/1.23.0"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.1.7"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 07 Jul 2022 23:27:38 GMT"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": [\n        {\n            \"id\": 1,\n            \"name\": \"Cairo\"\n        },\n        {\n            \"id\": 2,\n            \"name\": \"Giza\"\n        },\n        {\n            \"id\": 3,\n            \"name\": \"Alexandria\"\n        },\n        {\n            \"id\": 4,\n            \"name\": \"Dakahlia\"\n        },\n        {\n            \"id\": 5,\n            \"name\": \"Red Sea\"\n        },\n        {\n            \"id\": 6,\n            \"name\": \"Beheira\"\n        },\n        {\n            \"id\": 7,\n            \"name\": \"Fayoum\"\n        },\n        {\n            \"id\": 8,\n            \"name\": \"Gharbiya\"\n        },\n        {\n            \"id\": 9,\n            \"name\": \"Ismailia\"\n        },\n        {\n            \"id\": 10,\n            \"name\": \"Menofia\"\n        },\n        {\n            \"id\": 11,\n            \"name\": \"Minya\"\n        },\n        {\n            \"id\": 12,\n            \"name\": \"Qaliubiya\"\n        },\n        {\n            \"id\": 13,\n            \"name\": \"New Valley\"\n        },\n        {\n            \"id\": 14,\n            \"name\": \"Suez\"\n        },\n        {\n            \"id\": 15,\n            \"name\": \"Aswan\"\n        },\n        {\n            \"id\": 16,\n            \"name\": \"Assiut\"\n        },\n        {\n            \"id\": 17,\n            \"name\": \"Beni Suef\"\n        },\n        {\n            \"id\": 18,\n            \"name\": \"Port Said\"\n        },\n        {\n            \"id\": 19,\n            \"name\": \"Damietta\"\n        },\n        {\n            \"id\": 20,\n            \"name\": \"Sharkia\"\n        },\n        {\n            \"id\": 21,\n            \"name\": \"South Sinai\"\n        },\n        {\n            \"id\": 22,\n            \"name\": \"Kafr Al sheikh\"\n        },\n        {\n            \"id\": 23,\n            \"name\": \"Matrouh\"\n        },\n        {\n            \"id\": 24,\n            \"name\": \"Luxor\"\n        },\n        {\n            \"id\": 25,\n            \"name\": \"Qena\"\n        },\n        {\n            \"id\": 26,\n            \"name\": \"North Sinai\"\n        },\n        {\n            \"id\": 27,\n            \"name\": \"Sohag\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "trip book",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "1|OXQYpmK2v98Cu3FwlVKD7bYCPyLvVly7puHhLXp8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "from",
+							"value": "8",
+							"type": "text"
+						},
+						{
+							"key": "to",
+							"value": "6",
+							"type": "text"
+						},
+						{
+							"key": "seat_id",
+							"value": "2",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/trips/1/reserve",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"trips",
+						"1",
+						"reserve"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
