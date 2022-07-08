@@ -25,5 +25,5 @@ Route::prefix('auth')->namespace('Auth')->group(function () {
 Route::middleware('auth:user')->group(function () {
     Route::get('cities', [CityController::class, 'index']);
     Route::get('trips', [TripController::class, 'index']);
-    Route::post('trips/{trip}/reserve', [TripController::class, 'reserve']);
+    Route::post('trips/{trip}/book', [TripController::class, 'book']);
 });

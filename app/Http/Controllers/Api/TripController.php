@@ -31,7 +31,7 @@ class TripController extends Controller
         return TripResource::collection($trips);
     }
 
-    public function reserve($trip)
+    public function book($trip)
     {
         $seats = Trip::where('trips.id', $trip)
             ->tripWithFreeSeats(request('from'), request('to'))
@@ -41,7 +41,7 @@ class TripController extends Controller
 
         if (!$seat) {
             return response()->json([
-                'error' => "You can't reserve this seat"
+                'error' => "You can't book this seat"
             ], 422);
         }
 
@@ -66,7 +66,7 @@ class TripController extends Controller
         ]);
 
         return response()->json([
-            'message' => 'Seat has been reserved successfully'
+            'message' => 'Seat has been booked successfully'
         ]);
     }
 }

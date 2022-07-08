@@ -279,7 +279,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "1|OXQYpmK2v98Cu3FwlVKD7bYCPyLvVly7puHhLXp8",
+							"value": "1|pfI2GmaQaMhlKsqygQPztZxTTJh78fDuXFW2v4cc",
 							"type": "string"
 						}
 					]
@@ -287,7 +287,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{base_url}}/trips?from=1&to=6",
+					"raw": "{{base_url}}/trips?from=3&to=1",
 					"host": [
 						"{{base_url}}"
 					],
@@ -297,11 +297,11 @@
 					"query": [
 						{
 							"key": "from",
-							"value": "1"
+							"value": "3"
 						},
 						{
 							"key": "to",
-							"value": "6"
+							"value": "1"
 						}
 					]
 				}
@@ -407,7 +407,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "1|OXQYpmK2v98Cu3FwlVKD7bYCPyLvVly7puHhLXp8",
+							"value": "1|pfI2GmaQaMhlKsqygQPztZxTTJh78fDuXFW2v4cc",
 							"type": "string"
 						}
 					]
@@ -419,30 +419,30 @@
 					"formdata": [
 						{
 							"key": "from",
-							"value": "8",
+							"value": "3",
 							"type": "text"
 						},
 						{
 							"key": "to",
-							"value": "6",
+							"value": "1",
 							"type": "text"
 						},
 						{
 							"key": "seat_id",
-							"value": "2",
+							"value": "13",
 							"type": "text"
 						}
 					]
 				},
 				"url": {
-					"raw": "{{base_url}}/trips/1/reserve",
+					"raw": "{{base_url}}/trips/2/book",
 					"host": [
 						"{{base_url}}"
 					],
 					"path": [
 						"trips",
-						"1",
-						"reserve"
+						"2",
+						"book"
 					]
 				}
 			},
